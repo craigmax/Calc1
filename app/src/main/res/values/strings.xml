@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calc1</string>
+    <string name="calculator">World\'s Worst Calculator</string>
+    <string name="resultVal">0</string>
+    <string name="calc">Calc</string>
+    <string name="clear">Clear</string>
+</resources>
