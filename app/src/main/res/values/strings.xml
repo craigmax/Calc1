@@ -1,7 +1,13 @@
+<!-- Strings localization file for Calculator app -->
+
 <resources>
     <string name="app_name">Calc1</string>
     <string name="calculator">World\'s Worst Calculator</string>
     <string name="resultVal">0</string>
     <string name="calc">Calc</string>
     <string name="clear">Clear</string>
+    <string name="the_best_multiplier_ever">The BEST Multiplier EVER!</string>
+    <string name="the_product_is">The Product is:</string>
+    <string name="enter_first_value">Enter first value:</string>
+    <string name="enter_second_value">Enter second value:</string>
 </resources>

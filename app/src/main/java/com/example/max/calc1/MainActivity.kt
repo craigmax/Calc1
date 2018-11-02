@@ -4,9 +4,9 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 import java.security.KeyStore
 
+// Main routine
 
 class MainActivity : Activity() {
 
@@ -16,13 +16,12 @@ class MainActivity : Activity() {
     }
 
     fun calc (view: View) {
-        // Get the text view
 
-        // Get the value of the text view.
+        // Get the values of the text views.
         val first = num1.text.toString().toInt()
         val second = num2.text.toString().toInt()
 
-        val result = first + second
+        val result = first * second
 
         // Display the new value in the text view.
         resultView.text = result.toString()
@@ -38,11 +37,8 @@ class MainActivity : Activity() {
         //reset to zero
         resultView.text = "0"
 
+        //set focus to first input field
         num1.requestFocus()
-
-
     }
-
-
 
 }

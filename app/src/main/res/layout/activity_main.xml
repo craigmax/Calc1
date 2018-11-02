@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Main app label -->
     <TextView
         android:id="@+id/appLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="@string/calculator"
+        android:text="@string/the_best_multiplier_ever"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -19,56 +21,68 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.094" />
 
+    <!-- First input field -->
     <EditText
         android:id="@+id/num1"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appLabel"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.131" />
 
+    <!-- Second input field -->
     <EditText
         android:id="@+id/num2"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num1"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.106" />
 
+    <!-- Result view -->
     <TextView
         android:id="@+id/resultView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="44dp"
         android:layout_marginBottom="8dp"
         android:text="@string/resultVal"
-        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/num2"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.119" />
 
+    <!-- Calc button -->
     <Button
         android:id="@+id/calcButton"
         android:layout_width="wrap_content"
@@ -81,11 +95,12 @@
         android:text="@string/calc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultView"
-        app:layout_constraintVertical_bias="0.491" />
+        app:layout_constraintVertical_bias="0.0" />
 
+    <!-- Reset button -->
     <Button
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
@@ -98,7 +113,67 @@
         android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toEndOf="@+id/calcButton"
-        app:layout_constraintTop_toBottomOf="@+id/resultView" />
+        app:layout_constraintTop_toBottomOf="@+id/resultView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Result label -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/the_product_is"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <!-- Num1 label -->
+    <TextView
+        android:id="@+id/num1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:labelFor="@+id/num1"
+        android:text="@string/enter_first_value"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num1"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLabel"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <!-- Num2 label -->
+    <TextView
+        android:id="@+id/num2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:labelFor="@+id/num2"
+        android:text="@string/enter_second_value"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appLabel"
+        app:layout_constraintVertical_bias="0.365" />
 
 </android.support.constraint.ConstraintLayout>
